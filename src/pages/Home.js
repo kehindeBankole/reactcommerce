@@ -1,12 +1,12 @@
-import React , {useRef} from 'react'
+import React, { useRef } from "react";
+import "./home.css";
 
 function Home() {
- 
-    return (
-      <>
-     
-      </>
-    );
+  return (
+    <div className="banner">
+      <input type="text" />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
