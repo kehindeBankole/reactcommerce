@@ -1,0 +1,22 @@
+.catcard{
+    box-sizing: border-box;
+    box-shadow: "";
+    border:2px solid black;
+    height : 200px;
+    padding: 16px;
+    overflow-y: scroll;
+}
+.catcard .cat{
+    font-size: 0.9rem;
+    padding: 6px;
+}
+.catcard .cat:hover{
+    background-color: red;
+    cursor: pointer;
+}
+@media(min-width : 992px){
+    .catcard .cat{
+        font-size: 1rem;
+    }
+    
+}

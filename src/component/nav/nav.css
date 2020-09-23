@@ -1,0 +1,43 @@
+:root {
+  --navColor: purple;
+}
+body{
+    margin:0;
+}
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: var(--navColor);
+  position: sticky;
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr auto;
+  justify-items: start;
+  padding: 2px 15px !important;
+}
+
+nav .navtext {
+  display: none;
+}
+nav .userpart,
+nav .cart {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+  nav {
+    grid-template-columns: 1fr 1fr 0.5fr 0.3fr;
+  }
+  nav .navtext {
+    display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  nav .userpart,
+  nav .cart {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+}
