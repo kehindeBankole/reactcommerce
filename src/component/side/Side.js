@@ -3,17 +3,18 @@ import { ProductContext } from "../../context/product/context";
 import "./side.css";
 function Side() {
   const context = useContext(ProductContext);
-  const category = [];
+  let category;
   useEffect(() => {
     context.getproducts();
   }, []);
- console.log(category)
-
+ 
+ category=[...context.products.map((d)=>d.category)]
+ console.log([...new Set(category)])
   return (
     <div>
       <div className="catcard">
-        {context.products.map((product) => (
-          <div className="cat">{product.category}</div>
+        {[...new Set(category)].map((product , index) => (
+          <div className="cat">{product}</div>
         ))}
       </div>
     </div>

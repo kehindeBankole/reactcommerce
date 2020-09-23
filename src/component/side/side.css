@@ -4,7 +4,6 @@
     border:2px solid black;
     height : 200px;
     padding: 16px;
-    overflow-y: scroll;
 }
 .catcard .cat{
     font-size: 0.9rem;
