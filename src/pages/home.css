@@ -21,7 +21,9 @@ input[type=text] {
 }
 .homecontent{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-column-gap : 30px;
+    justify-content: space-around;
 }
 @media(min-width : 992px){
     input[type=text] {
