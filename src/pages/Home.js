@@ -3,23 +3,28 @@ import Side from "../component/side/Side";
 import "./home.css";
 import slider1 from "../images/slider1.jpg";
 import slider2 from "../images/slider2.jpeg";
+import slider3 from "../images/slider3.jpg";
 import man from "../images/man.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 function Home() {
-  const [sliderArray] = useState([slider1 , slider2]);
+  let current = 0;
+  const [sliderArray] = useState([slider1, slider2, slider3]);
+  const [image, setimage] = useState(sliderArray[current]);
   const sliderStyle = {
-    backgroundImage: `url("${sliderArray[0]}")`,
+    backgroundImage: `url("${image}")`,
     backgroundPosition: "center",
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
   };
-  function handleLeft() {
-    console.log(2);
-  }
+  function handleLeft() {}
   function handleRight() {
-    console.log(3);
+   current++;
+    console.log(current);
+    //setimage(sliderArray[current]);
+    
   }
+ 
   return (
     <>
       <div className="banner">

@@ -10,7 +10,6 @@ function Side() {
   }, []);
 
   category = [...context.products.map((d) => d.category)];
-  console.log([...new Set(category)]);
   return (
     <div>
       <div className="catcard">
