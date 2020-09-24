@@ -18,5 +18,6 @@ export default function ProductReducer(state , action){
             load : false , 
             err : action.payload
         }
+        default : return state
     }
 }

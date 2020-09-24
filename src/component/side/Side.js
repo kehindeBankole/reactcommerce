@@ -5,16 +5,19 @@ function Side() {
   const context = useContext(ProductContext);
   let category;
   useEffect(() => {
+ 
     context.getproducts();
   }, []);
- 
- category=[...context.products.map((d)=>d.category)]
- console.log([...new Set(category)])
+
+  category = [...context.products.map((d) => d.category)];
+  console.log([...new Set(category)]);
   return (
     <div>
       <div className="catcard">
-        {[...new Set(category)].map((product , index) => (
-          <div className="cat">{product}</div>
+        {[...new Set(category)].map((product, index) => (
+          <div className="cat" key={index}>
+            {product}
+          </div>
         ))}
       </div>
     </div>
