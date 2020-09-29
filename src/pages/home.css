@@ -27,7 +27,6 @@ input[type="text"] {
   display: grid;
   padding: 15px;
   position: relative;
-
 }
 
 .contentarea , .products{
@@ -35,8 +34,9 @@ input[type="text"] {
 }
 #item{
   display: grid;
-  grid-template-columns: repeat(4 , 1fr);
+  grid-template-columns: repeat(2 , 1fr);
   grid-gap : 10px;
+  justify-content: space-around;
 }
 aside {
   display: none;
@@ -46,7 +46,11 @@ aside {
     margin-left: 4rem;
     display: block;
   }
+  #item{
+  
+    grid-template-columns: repeat(4 , 1fr);
 
+  }
   input[type="text"] {
     width: 50%;
   }
@@ -62,6 +66,5 @@ aside {
 
   aside {
     display: block;
-    position: sticky;
   }
 }
