@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { ProductContext } from "../../context/product/context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPlus} from "@fortawesome/free-solid-svg-icons"
+import {Link} from "react-router-dom"
 import "./item.css";
 function Item() {
   const context = useContext(ProductContext);
@@ -10,11 +11,14 @@ function Item() {
     <>
       {context.products.map((data, i) => (
         <div class="card">
+          
           <img src={data.image} alt="Avatar" style={{ width: "100%" }} />
           <p style={{fontSize:'1rem'}}>{data.title}</p>
           <p class="price">{data.price}</p>
-          <p>
-            <button><FontAwesomeIcon icon={faPlus}/></button>
+          <p><Link to={`/product/${data.id}`}>
+          <button><FontAwesomeIcon icon={faPlus}/></button>
+          </Link>
+            
           </p>
         </div>
       ))}
