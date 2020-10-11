@@ -17,3 +17,10 @@ code {
   margin : 0;
   padding : 0;
 } */
+.linklogo{
+  text-decoration: none;
+  color:#E3D7FF
+}
+.link{
+  text-decoration: none;
+}

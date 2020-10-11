@@ -10,6 +10,7 @@ function Item() {
   return (
     <>
       {context.products.map((data, i) => (
+        <Link to={`/product/${data.id}`} className="link">
         <div class="card">
           
           <img src={data.image} alt="Avatar" style={{ width: "100%" }} />
@@ -21,6 +22,7 @@ function Item() {
             
           </p>
         </div>
+        </Link>
       ))}
     </>
   );

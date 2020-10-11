@@ -3,6 +3,7 @@ import Side from "../component/side/Side";
 import "./home.css";
 import Item from "../component/product/Item";
 import man from "../images/man.png";
+import girls from '../images/girls.png'
 import Slider from "../component/slider/Slider";
 function Home() {
 
@@ -10,8 +11,9 @@ function Home() {
  return (
     <>
       <div className="banner">
-        <img src={man} alt="banner image one" />
+        <img src={man} alt="banner image one" id="first" />
         <input type="text" />
+        <img src={girls} alt="banner image one" />
       </div>
       <div className="homecontent">
         <aside>
